@@ -5,7 +5,7 @@ spec = Gem::Specification.new do |s|
   #### Basic information.
 
   s.name = 'MB-Ruby'
-  s.version = '0.1.0'
+  s.version = '0.2.0'
   s.summary = <<-EOF
     MusicBrainz bindings for Ruby.
   EOF
@@ -13,7 +13,7 @@ spec = Gem::Specification.new do |s|
     MusicBrainz bindings for Ruby.
   EOF
 
-  s.requirements << 'MusicBrainz, version 2.0.0 (or newer)'
+  s.requirements << 'MusicBrainz, version 2.1.0 (or newer)'
   s.requirements << 'Ruby, version 1.6.7 (or newer)'
 
   #### Which files are to be included in this gem?  Everything!  (Except CVS directories.)
@@ -26,9 +26,11 @@ spec = Gem::Specification.new do |s|
   s.extensions << "extconf.rb"
 
   #### Load-time details: library and application (you will need one or both).
-  s.autorequire = 'fam'
+  s.autorequire = 'musicbrainz'
   s.has_rdoc = true
-  s.rdoc_options = ['musicbrainz.c', 'README', 'ChangeLog', 'AUTHORS', 'COPYING', 'TODO']
+  s.rdoc_options = ['--title', 'MB-Ruby API Documentation', '--webcvs',
+  'http://cvs.pablotron.org/cgi-bin/viewcvs.cgi/mb-ruby/',
+  'musicbrainz.c', 'AUTHORS', 'README', 'ChangeLog', 'COPYING', 'TODO']
 
   #### Author and project details.
 

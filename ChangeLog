@@ -17,3 +17,6 @@
   * musicbrainz.c: updated version
   * README: updated version, lib requirements
   * added AUTHORS
+
+* Tue Nov 23 19:35:04 2004, pabs <pabs@pablotron.org>
+  * mb.gemspec: updated version requirements, incremented lib version
