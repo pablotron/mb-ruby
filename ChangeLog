@@ -10,3 +10,10 @@
 
 * Wed Aug 25 00:35:48 2004, pabs <pabs@pablotron.org>
   * added mb.gemspec
+
+* Tue Nov 23 19:26:45 2004, pabs <pabs@pablotron.org>
+  * musicbrainz.c: applied patch from Ed Summers (remove stuff :()
+  * musicbrainz.c: fixed  couple of warnings
+  * musicbrainz.c: updated version
+  * README: updated version, lib requirements
+  * added AUTHORS

@@ -1,7 +1,7 @@
-MusicBrains-Ruby 0.1.0 README
+MusicBrains-Ruby 0.2.0 README
 =============================
 
-This document was last updated on Wed Feb 12 15:21:06 2003.  See the
+This document was last updated on Tue Nov 23 19:34:11 2004.  See the
 file COPYING for licensing and warranty information.  Please see
 http://www.pablotron.org/software/musicbrainz-ruby/ for the latest
 version of this software.
@@ -15,7 +15,7 @@ binding for MusicBrainz.
 Installing MusicBrainz-Ruby
 ===========================
 Installation should be fairly straightforward.  Assuming you have both
-Ruby and version 2.0.0 or later of the MusicBrainz client library,
+Ruby and version 2.1.0 or later of the MusicBrainz client library,
 simply do the following:
 
 # ruby extconf.rb 

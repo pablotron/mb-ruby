@@ -1,9 +1,9 @@
 #include <ruby.h>
 #include <musicbrainz/mb_c.h>
 #include <musicbrainz/queries.h>
-#include <musicbrainz/queries.h>
+#include <musicbrainz/browser.h>
 
-#define MB_VERSION "0.1.0"
+#define MB_VERSION "0.2.0"
 #define UNUSED(a) ((void) (a))
 
 #define MB_QUERY(a,b,c)                  \
@@ -387,7 +387,6 @@ static VALUE mb_client_query(int argc, VALUE *argv, VALUE self) {
 static VALUE mb_client_url(VALUE self) {
   musicbrainz_t *mb;
   char buf[BUFSIZ];
-  int len;
   VALUE ret = Qnil;
 
   Data_Get_Struct(self, musicbrainz_t, mb);
@@ -413,7 +412,6 @@ static VALUE mb_client_url(VALUE self) {
 static VALUE mb_client_error(VALUE self) {
   musicbrainz_t *mb;
   char buf[BUFSIZ];
-  int len;
 
   Data_Get_Struct(self, musicbrainz_t, mb);
   mb_GetQueryError(*mb, buf, sizeof(buf));
@@ -714,7 +712,6 @@ static VALUE mb_client_ordinal(VALUE self, VALUE list, VALUE uri) {
  * Examples:
  *   sha1 = mb.sha1 'foo.mp3'
  *
- */
 static VALUE mb_client_sha1(VALUE self, VALUE path) {
   musicbrainz_t *mb;
   char buf[41];
@@ -724,41 +721,7 @@ static VALUE mb_client_sha1(VALUE self, VALUE path) {
 
   return rb_str_new2(buf);
 }
-
-/* 
- * Calculate the Bitzi bitprint info for a given filename.
- *
- * Aliases:
- *   MusicBrainz::Client#calculate_bitprint
- *
- * Examples:
- *   # print the bitprint for a file called 'foo.mp3'
- *   bp = mb.bitprint 'foo.mp3'
- *   puts 'foo.mp3 bitprint: ' << bp['bitprint']
- *
  */
-static VALUE mb_client_bitprint(VALUE self, VALUE path) {
-  musicbrainz_t *mb;
-  BitprintInfo *info;
-  VALUE ret = Qnil;
-
-  Data_Get_Struct(self, musicbrainz_t, mb);
-  if (mb_CalculateBitprint(*mb, RSTRING(path)->ptr, info)) {
-    ret = rb_hash_new();
-    rb_hash_aset(ret, rb_str_new2("filename"), rb_str_new2(info->filename));
-    rb_hash_aset(ret, rb_str_new2("bitprint"), rb_str_new2(info->bitprint));
-    rb_hash_aset(ret, rb_str_new2("first20"), rb_str_new2(info->first20));
-    rb_hash_aset(ret, rb_str_new2("audioSha1"), rb_str_new2(info->audioSha1));
-    rb_hash_aset(ret, rb_str_new2("length"), INT2FIX(info->length));
-    rb_hash_aset(ret, rb_str_new2("duration"), INT2FIX(info->duration));
-    rb_hash_aset(ret, rb_str_new2("samplerate"), INT2FIX(info->samplerate));
-    rb_hash_aset(ret, rb_str_new2("bitrate"), INT2FIX(info->bitrate));
-    rb_hash_aset(ret, rb_str_new2("stereo"), INT2FIX(info->stereo));
-    rb_hash_aset(ret, rb_str_new2("vbr"), INT2FIX(info->vbr));
-  }
-
-  return ret;
-}
 
 /*
  * Calculate the crucial pieces of information for an MP3 file.
@@ -779,7 +742,6 @@ static VALUE mb_client_bitprint(VALUE self, VALUE path) {
  */
 static VALUE mb_client_mp3_info(VALUE self, VALUE path) {
   musicbrainz_t *mb;
-  BitprintInfo *info;
   VALUE ret = Qnil;
   int dr, br, st, sr;
 
@@ -1235,12 +1197,6 @@ void Init_musicbrainz(void) {
   rb_define_method(cClient, "ordinal", mb_client_ordinal, 2);
   rb_define_alias(cClient, "get_ordinal", "ordinal");
   rb_define_alias(cClient, "get_ordinal_from_list", "ordinal");
-
-  rb_define_method(cClient, "sha1", mb_client_sha1, 1);
-  rb_define_alias(cClient, "calculate_sha1", "sha1");
-
-  rb_define_method(cClient, "bitprint", mb_client_bitprint, 1);
-  rb_define_alias(cClient, "calculate_bitprint", "bitprint");
 
   rb_define_method(cClient, "mp3_info", mb_client_mp3_info, 1);
   rb_define_alias(cClient, "get_mp3_info", "mp3_info");

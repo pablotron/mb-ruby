@@ -1,0 +1,8 @@
+MusicBrains-Ruby AUTHORS
+========================
+
+Paul Duncan <pabs@pablotron.org>
+* main author
+
+Ed Summers <ehs@pobox.com>
+* initial libmusicbrainz 2.1 support (remove BitprintInfo support)
