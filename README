@@ -1,0 +1,27 @@
+MusicBrains-Ruby 0.1.0 README
+=============================
+
+This document was last updated on Wed Feb 12 15:21:06 2003.  See the
+file COPYING for licensing and warranty information.  Please see
+http://www.pablotron.org/software/musicbrainz-ruby/ for the latest
+version of this software.
+
+Introduction
+============
+MusicBrainz (http://www.musicbrainz.org/) is a music metadatabase
+similar to CDDB.  MusicBrainz-Ruby is a Ruby (http://www.ruby-lang.org/)
+binding for MusicBrainz.
+
+Installing MusicBrainz-Ruby
+===========================
+Installation should be fairly straightforward.  Assuming you have both
+Ruby and version 2.0.0 or later of the MusicBrainz client library,
+simply do the following:
+
+# ruby extconf.rb 
+# make && su -c 'make install'
+
+About the Author
+================
+Paul Duncan <pabs@pablotron.org>
+http://www.pablotron.org/

@@ -1,0 +1,17 @@
+./MANIFEST
+./musicbrainz.c
+./extconf.rb
+./README
+./depend
+./TODO
+./examples/findalbum.rb
+./examples/cdlookup.rb
+./examples/getalbum.rb
+./examples/findartist.rb
+./examples/findtrack.rb
+./examples/getartist.rb
+./examples/gettrack.rb
+./examples/gettrm.rb
+./examples/submittrm.rb
+./COPYING
+./ChangeLog

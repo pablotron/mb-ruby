@@ -1,0 +1,9 @@
+* Wed Feb 12 15:39:06 2003, pabs <pabs@pablotron.org>
+  * created ChangeLog
+
+* Wed Feb 12 16:05:40 2003, pabs <pabs@pablotron.org
+  * added MusicBrainz::Client#launch
+
+* Wed Feb 12 16:19:56 2003, pabs <pabs@pablotron.org
+  * changed package (tarball) name to mb-ruby, since RAA apparently
+    can't handle names longer than 15 characters. :(
