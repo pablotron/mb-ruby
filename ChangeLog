@@ -20,3 +20,6 @@
 
 * Tue Nov 23 19:35:04 2004, pabs <pabs@pablotron.org>
   * mb.gemspec: updated version requirements, incremented lib version
+
+* Tue Nov 23 19:35:38 2004, pabs <pabs@pablotron.org>
+  * releasing version 0.2.0
