@@ -7,3 +7,6 @@
 * Wed Feb 12 16:19:56 2003, pabs <pabs@pablotron.org
   * changed package (tarball) name to mb-ruby, since RAA apparently
     can't handle names longer than 15 characters. :(
+
+* Wed Aug 25 00:35:48 2004, pabs <pabs@pablotron.org>
+  * added mb.gemspec
