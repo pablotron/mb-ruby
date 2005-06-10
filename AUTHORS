@@ -6,3 +6,6 @@ Paul Duncan <pabs@pablotron.org>
 
 Ed Summers <ehs@pobox.com>
 * initial libmusicbrainz 2.1 support (remove BitprintInfo support)
+
+Tilman Sauerbeck <tilman@code-monkey.de>
+* extconf patch, minor function fix

@@ -13,7 +13,7 @@ mb.debug = true if ENV['MB_DEBUG']
 mb.depth = depth.to_i if depth = ENV['MB_DEPTH']
 
 
-unless ARGV.size
+unless ARGV.size > 0
   $stderr.puts 'Missing query string.'
   exit -1
 end

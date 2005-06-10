@@ -3,7 +3,7 @@
 #include <musicbrainz/queries.h>
 #include <musicbrainz/browser.h>
 
-#define MB_VERSION "0.2.0"
+#define MB_VERSION "0.2.1"
 #define UNUSED(a) ((void) (a))
 
 #define MB_QUERY(a,b,c)                  \
@@ -1137,10 +1137,10 @@ void Init_musicbrainz(void) {
   rb_define_method(cClient, "auth", mb_client_auth, 2);
   rb_define_alias(cClient, "authenticate", "auth");
 
-  rb_define_method(cClient, "device=", mb_client_set_device, -1);
+  rb_define_method(cClient, "device=", mb_client_set_device, 1);
   rb_define_alias(cClient, "set_device", "device=");
 
-  rb_define_method(cClient, "utf8=", mb_client_set_use_utf8, -1);
+  rb_define_method(cClient, "utf8=", mb_client_set_use_utf8, 1);
   rb_define_alias(cClient, "use_utf8=", "utf8=");
   rb_define_alias(cClient, "set_use_utf8", "utf8=");
 

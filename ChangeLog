@@ -23,3 +23,16 @@
 
 * Tue Nov 23 19:35:38 2004, pabs <pabs@pablotron.org>
   * releasing version 0.2.0
+
+* Thu Jun 09 22:10:33 2005, pabs <pabs@pablotron.org>
+  * COPYING: update copyright
+  * README: add bug report section
+  * README: increment version to 0.2.1
+  * musicbrainz.c: ditto
+  * musicbrainz.c: apply patch from tilman to fix use_utf8 and device= 
+    declarations (Fixes: #30)
+  * AUTHORS: add tilman to list of authors
+  * extconf.rb: apply patch from tilman to fix -lm weirdness on his
+    system (Fixes: #31)
+  * examples/findalbum.rb: 'unless ARGV.size' => 'unless ARGV.size > 0'
+  * examples/findartist.rb: same (Fixes: #13)
