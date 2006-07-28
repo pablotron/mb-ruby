@@ -39,3 +39,6 @@
 
 * Thu Jun 09 23:10:53 2005, pabs <pabs@pablotron.org>
   * releasing 0.2.1
+
+* Fri Jul 28 18:32:06 2006, pabs <pabs@pablotron.org>
+  * examples/gettrm.rb: minor cleanups
