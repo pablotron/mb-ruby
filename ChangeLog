@@ -42,3 +42,27 @@
 
 * Fri Jul 28 18:32:06 2006, pabs <pabs@pablotron.org>
   * examples/gettrm.rb: minor cleanups
+
+* Mon Aug 07 13:17:41 2006, pabs <pabs@pablotron.org>
+  * musicbrainz.c: added copyright notice at top of file
+  * musicbrainz.c: increment version to 0.3.0
+  * musicbrainz.c: added individual buffer sizes (based on a patch from
+    tilman)
+  * musicbrainz.c: Added documentation for top-level MusicBrainz module
+  * musicbrainz.c: consolidate host spec parsing in parse_hostpec()
+    (again, based on a patch form tilman)
+  * musicbrainz.c: added 1.8-style allocators for Client and TRM classes
+  * musicbrainz.c: wrap all exceptions in MusicBrainz::Error 
+  * musicbrainz.c: better ruby 1.8 style C string handling
+    RSTRING()->ptr to StringValueCStr() and whatnot
+  * musicbrainz.c: document MusicBrainz::TRM module
+  * musicbrainz.c: documentation for all known queries (constants
+    defined under MusicBrainz::Query)
+  * musicbrainz.c: added several new queries: SelectRelationship, 
+    AlbumGetAmazonAsin, AlbumGetNumReleaseDates, QuickGetARtistSortName,
+    QuickGetArtistId, ReleaseGetDate, ReleaseGetCountry,
+    LookupGetAlbumArtistId, LookupGetTrackArtistId, GetCDTOC, 
+    GetARtistRelationsById, GetAlbumRelationsById, and
+    GetTrackRelationsById
+  * musicbrainz.c: fixed MusicBrainz::TRM#finalize
+  * examples/findalbum.rb: cleaner code
