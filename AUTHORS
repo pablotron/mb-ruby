@@ -9,3 +9,5 @@ Ed Summers <ehs@pobox.com>
 
 Tilman Sauerbeck <tilman@code-monkey.de>
 * extconf patch, minor function fix
+* better 1.8-style string handling and allocators
+* host specification abstraction

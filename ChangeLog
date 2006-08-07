@@ -66,3 +66,6 @@
     GetTrackRelationsById
   * musicbrainz.c: fixed MusicBrainz::TRM#finalize
   * examples/findalbum.rb: cleaner code
+
+* Mon Aug 07 13:29:42 2006, pabs <pabs@pablotron.org>
+  * AUTHORS: update tilman's entry
