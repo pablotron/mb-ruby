@@ -1666,6 +1666,9 @@ static void define_queries(void) {
 #ifdef MBS_SelectRelationship
   MB_QUERY("MBS", "SelectRelationship", MBS_SelectRelationship);
 #endif /* MBS_SelectRelationship */
+#ifdef MBS_SelectReleaseDate
+  MB_QUERY("MBS", "SelectReleaseDate", MBS_SelectReleaseDate);
+#endif /* MBS_SelectReleaseDate */
 
   MB_QUERY("MBE", "QuerySubject", MBE_QuerySubject);
   MB_QUERY("MBE", "GetError", MBE_GetError);

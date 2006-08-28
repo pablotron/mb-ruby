@@ -69,3 +69,6 @@
 
 * Mon Aug 07 13:29:42 2006, pabs <pabs@pablotron.org>
   * AUTHORS: update tilman's entry
+
+* Mon Aug 28 19:46:26 2006, pabs <pabs@pablotron.org>
+  * oops! added SelectReleaseDate (patch from tilman)
