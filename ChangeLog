@@ -75,3 +75,9 @@
 
 * Thu Aug 31 01:45:54 2006, pabs <pabs@pablotron.org>
   * releasing 0.3.0
+
+* Thu Aug 31 01:49:20 2006, pabs <pabs@pablotron.org>
+  * mb.gemspec: (oops!) updated version to 0.3.0
+  * README: update version to 0.3.0
+  * README: add note about rubygems
+  * AUTHORS: add note about Chad 

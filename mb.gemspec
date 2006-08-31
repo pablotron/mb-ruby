@@ -5,7 +5,7 @@ spec = Gem::Specification.new do |s|
   #### Basic information.
 
   s.name = 'MB-Ruby'
-  s.version = '0.2.0'
+  s.version = '0.3.0'
   s.summary = <<-EOF
     MusicBrainz bindings for Ruby.
   EOF
@@ -36,6 +36,6 @@ spec = Gem::Specification.new do |s|
 
   s.author = 'Paul Duncan'
   s.email = 'pabs@pablotron.org'
-  s.homepage = 'http://www.pablotron.org/software/mb-ruby/'
+  s.homepage = 'http://pablotron.org/software/mb-ruby/'
   s.rubyforge_project = 'mb-ruby'
 end

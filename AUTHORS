@@ -11,3 +11,6 @@ Tilman Sauerbeck <tilman@code-monkey.de>
 * extconf patch, minor function fix
 * better 1.8-style string handling and allocators
 * host specification abstraction
+
+Chad Fowler <chad@chadfowler.com>
+* Making my life a bit easier by handling gem uploads.

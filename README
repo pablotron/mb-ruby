@@ -1,7 +1,7 @@
-MusicBrains-Ruby 0.2.1 README
+MusicBrains-Ruby 0.3.0 README
 =============================
 
-This document was last updated on Thu Jun 09 22:09:26 2005.  See the
+This document was last updated on Thu Aug 31 01:49:45 2006.  See the
 file COPYING for licensing and warranty information.  Please see
 http://www.pablotron.org/software/mb-ruby/ for the latest
 version of this software.
@@ -18,8 +18,15 @@ Installation should be fairly straightforward.  Assuming you have both
 Ruby and version 2.1.0 or later of the MusicBrainz client library,
 simply do the following:
 
-# ruby extconf.rb 
-# make && su -c 'make install'
+  # ruby extconf.rb 
+  # make && su -c 'make install'
+
+If you have RubyGems (http://rubygems.org/) installed, you can also
+install MusicBrainz-Ruby like this:
+
+  sudo gem install mb-ruby
+
+
 
 Reporting Bugs
 ==============
